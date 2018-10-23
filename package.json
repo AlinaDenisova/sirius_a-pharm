@@ -1,16 +1,16 @@
 {
-  "name": "sirius a-pharm",
+  "name": "sirius_a-pharm",
   "version": "14.0.0",
   "private": true,
   "description": "Оптовая торговля лекарственными препаратами",
   "devDependencies": {
+    "@htmlacademy/editorconfig-cli": "1.x",
     "autoprefixer": "8.3.x",
     "browser-sync": "2.23.x",
-    "gulp": "3.9.x",
+    "gulp": "^3.9.1",
     "gulp-plumber": "1.2.x",
     "gulp-postcss": "7.0.x",
     "gulp-sass": "4.0.x",
-    "@htmlacademy/editorconfig-cli": "1.x",
     "stylelint": "9.2.x",
     "stylelint-config-htmlacademy": "0.1.x"
   },
