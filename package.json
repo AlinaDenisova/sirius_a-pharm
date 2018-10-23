@@ -2,7 +2,7 @@
   "name": "sirius_a-pharm",
   "version": "14.0.0",
   "private": true,
-  "description": "Оптовая торговля лекарственными препаратами",
+  "description": "Группа компаний А-Фарм и Сириус Фарм",
   "devDependencies": {
     "@htmlacademy/editorconfig-cli": "1.x",
     "autoprefixer": "8.3.x",
