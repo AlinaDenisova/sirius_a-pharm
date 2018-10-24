@@ -9,73 +9,72 @@
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body class="no-js">
-    <header class="page-header">
-      <nav class="main-nav main-nav--closed">
-        <div class="main-nav__logo">
-          <a class="main-nav__logo-link">
-            <picture>
+    <header class="page-header page-header--closed">
+      <div class="page-header__container">
+        <div class="page-header__logo">
+          <a class="page-header__logo-link">
+            <picture class="page-header__logo-img">
 <!--               <source type="image/webp" srcset="img/logo-sirius.webp 1x, img/logo-sirius@2x.webp 2x, img/logo-sirius@3x.webp 3x"> -->
 
               <img src="img/logo-sirius.png" srcset="img/logo-sirius@2x.png 2x, img/logo-sirius@3x.png 3x" width="120" height="40" alt="Логотип компании «Sirius»">
             </picture>
-            <picture>
+            <picture class="page-header__logo-img">
 <!--               <source type="image/webp" srcset="img/logo-pharm.webp 1x, img/logo-pharm@2x.webp 2x, img/logo-pharm@3x.webp 3x"> -->
-
               <img src="img/logo-pharm.png" srcset="img/logo-pharm@2x.png 2x, img/logo-pharm@3x.png 3x" width="64" height="47" alt="Логотип компании «A-Pharm»">
             </picture>
           </a>
         </div>
 
-        <button class="main-nav__toggle" type="button">
-          <span class="main-nav__toggle-line"></span>
+        <button class="page-header__toggle" type="button">
+          <span class="page-header__toggle-line"></span>
           <span class="visually-hidden">Открыть меню</span>
         </button>
 
-        <div class="main-nav__container">
-          <ul class="language-list">
-            <li class="language-list__item">
-              <a class="language-list__link language-list__link--active" href="#">
-                Ru</a>
-            </li>
-            <li class="language-list__item">
-              <a class="language-list__link" href="#">En</a>
-            </li>
-          </ul>
+        <ul class="language-list">
+          <li class="language-list__item">
+            <a class="language-list__link language-list__link--active" href="#">
+              Ru</a>
+          </li>
+          <li class="language-list__item">
+            <a class="language-list__link" href="#">En</a>
+          </li>
+        </ul>
 
-          <ul class="site-list">
-            <li class="site-list__item">
-              <a class="site-list__link site-list__link--icon" href="#">
-                <img class="site-list__icon" src="img/icon-home.svg" width="15" height="14" alt="Иконка возрата на главную">
-              </a>
-            </li>
-            <li class="site-list__item">
-              <a class="site-list__link" href="#">О холдинге</a>
-            </li>
-            <li class="site-list__item">
-              <a class="site-list__link" href="#">Оптовые поставки</a>
-            </li>
-            <li class="site-list__item">
-              <a class="site-list__link" href="#">Логистические услуги</a>
-            </li>
-            <li class="site-list__item">
-              <a class="site-list__link" href="#">Ваканссии</a>
-            </li>
-            <li class="site-list__item">
-              <a class="site-list__link" href="#">Контакты</a>
-            </li>
-          </ul>
+        <ul class="site-list">
+          <li class="site-list__item">
+            <a class="site-list__link" href="#">
+              <img class="site-list__icon" src="img/icon-home.svg" width="15" height="14" alt="Иконка возрата на главную">
+            </a>
+          </li>
+          <li class="site-list__item">
+            <a class="site-list__link" href="#">О холдинге</a>
+          </li>
+          <li class="site-list__item">
+            <a class="site-list__link" href="#">Оптовые поставки</a>
+          </li>
+          <li class="site-list__item">
+            <a class="site-list__link" href="#">Логистические услуги</a>
+          </li>
+          <li class="site-list__item">
+            <a class="site-list__link" href="#">Ваканссии</a>
+          </li>
+          <li class="site-list__item">
+            <a class="site-list__link" href="#">Контакты</a>
+          </li>
+        </ul>
 
-          <div class="contacts">
-            <a class="contacts__phone" href="tel:+7(495)2155074"> +7 (495) 215-50-74</a>
-            <a class="contacts__email" href="mailto:sale@sirius-phar.com">sale@sirius-phar.com</a>
-            <a class="contacts__email" href="mailto:info@a-pharm.com">info@a-pharm.com</a>
-          </div>
-
-          <div class="promo">
-            <p class="promo__text">Группа компаний А-Фарм и Сириус Фарм – крупнейший в России Дистрибутор медикаментов и товаров медицинского назначения полного цикла: доставка, складское хранение, дистрибуция, экспорт, реализация в коммерческих сетях и бюджетных учреждениях.</p>
-          </div>
+        <div class="contacts">
+          <a class="contacts__phone" href="tel:+7(495)2155074"> +7 (495) 215-50-74</a>
+          <a class="contacts__email" href="mailto:sale@sirius-phar.com">sale@sirius-phar.com</a>
+          <a class="contacts__email" href="mailto:info@a-pharm.com">info@a-pharm.com</a>
         </div>
-      </nav>
+      </div>
+
+      <div class="promo">
+        <div class="promo__wrapper">
+          <p class="promo__text">Группа компаний А-Фарм и Сириус Фарм – крупнейший в России дистрибутор медикаментов и товаров медицинского назначения полного цикла: доставка, складское хранение, дистрибуция, экспорт, реализация в коммерческих сетях и бюджетных учреждениях.</p>
+        </div>
+      </div>
     </header>
 
     <main class="page-main">
@@ -230,5 +229,8 @@
         </div>
       </div>
     </footer>
+
+    <script src="js/remove-no-js.js"></script>
+    <script src="js/navigation.js"></script>
   </body>
 </html>

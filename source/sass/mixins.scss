@@ -3,6 +3,12 @@
   width: 100%;
 }
 
+@mixin desktop-width {
+  max-width: 1140px;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
 @mixin list-reset {
   margin: 0;
   padding: 0;

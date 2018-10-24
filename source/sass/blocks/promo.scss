@@ -1,0 +1,32 @@
+.promo {
+  padding: 0 25px;
+  margin: auto 20px calc(100% - 60%);
+  width: 87%;
+  box-sizing: border-box;
+}
+
+.promo__wrapper {
+  font-size: 18px;
+  line-height: 27px;
+  color: #ffffff;
+  display: inline;
+  box-shadow: 25px 0 0 rgba(#186aa9, 0.6), -25px 0 0 rgba(#186aa9, 0.6);
+}
+
+.promo__text {
+  display: inline;
+  background-color: rgba(#186aa9, 0.6);
+}
+
+@media (min-width: $tablet-width) {
+  .promo {
+    margin: auto 0 calc(100% - 79.5%);
+  }
+
+  .promo__wrapper {
+    font-size: 26px;
+    line-height: 46px;
+  }
+}
+
+
