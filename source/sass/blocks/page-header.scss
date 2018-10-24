@@ -4,9 +4,9 @@
   flex-direction: column;
   background-color: #040507;
   background-image: url("../img/bg-index.jpg");
-  background-repeat: no-repeat,no-repeat;
+  background-repeat: no-repeat;
   background-size: auto;
-  background-position: 0 bottom,50% bottom;
+  background-position: 0 bottom;
   width: 100%;
   min-height: 700px;
 }
@@ -22,7 +22,7 @@
   display: flex;
 }
 
-.page-header__logo-img  {
+.page-header__logo-img {
   padding-right: 22px;
 
   &:last-child {
@@ -69,7 +69,7 @@
 }
 
 .page-header--opened .page-header__toggle {
-  position: fixed;
+  position: absolute;
   top: 23px;
   right: 23px;
   z-index: 2;
@@ -102,18 +102,54 @@
 }
 
 .page-header__container {
+  @include container;
   display: flex;
   background-color: #000000;
   background-image: url("../img/bg-pattern.jpg");
   background-repeat: round;
   flex-direction: column;
-  padding: 0 20px;
+}
+
+@media (max-width: $until-tablet-width) {
+  .page-header {
+    &--opened {
+      min-height: 1100px;
+    }
+
+    &--closed .page-header__container {
+      max-height: 80px;
+      overflow: hidden;
+      background-image: none;
+      background-color: transparent;
+    }
+
+    &--opened .page-header__container {
+      overflow: visible;
+    }
+  }
+
+  .no-js {
+    .page-header {
+      min-height: 1100px;
+    }
+
+    .page-header__container {
+      overflow: visible;
+    }
+
+    .page-header__toggle {
+      display: none;
+    }
+  }
 }
 
 @media (min-width: $tablet-width) {
   .page-header {
+    background-image: url("../img/stripes-index.png"), url("../img/bg-index.jpg");
+    background-repeat: no-repeat, no-repeat;
+    background-size: auto;
     background-position-y: 0;
-    background-position-x: calc(100% - 50%);
+    background-position-x: calc((100% - 50%) + 40px), calc(100% - 50%);
   }
 
   .page-header__container {
@@ -121,45 +157,19 @@
     flex-wrap: wrap;
     align-items: top;
     padding: 0;
+    padding-top: 15px;
     background-image: none;
     background-color: transparent;
-  }
-}
-
-@media (max-width: $until-tablet-width) {
-  .page-header {
-    &--opened {
-      min-height: 1000px;
-    }
-
-    &--closed .page-header__container {
-      max-height: 80px;
-      overflow: hidden;
-    }
-
-    &--opened .page-header__container {
-      overflow: visible;
-    }
-
-    &--nojs .page-header__container {
-      position: static;
-      overflow: visible;
-      min-height: 400px;
-    }
-
-    &--nojs .page-header__toggle {
-      display: none;
-    }
-  }
-}
-
-@media (min-width: $tablet-width) {
-  .page-header__container {
-    padding-top: 15px;
   }
 
   .page-header__logo {
     padding: 0;
     margin-right: 8.5%;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page-header__container {
+    @include desktop-width;
   }
 }

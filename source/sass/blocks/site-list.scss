@@ -2,16 +2,6 @@
   @include list-reset;
 }
 
-@media (min-width: $tablet-width) {
-  .site-list {
-    display: flex;
-    justify-content: center;
-    order: 2;
-    margin: 0;
-    background-color: transparent;
-  }
-}
-
 .site-list__item {
   display: flex;
   flex-direction: column;
@@ -33,8 +23,18 @@
   }
 }
 
+@media (max-width: $until-tablet-width) {
+  .no-js .site-list__item-list {
+    display: block;
+  }
+}
+
 @media (min-width: $tablet-width) {
   .site-list {
+    display: flex;
+    order: 2;
+    margin: 0;
+    background-color: transparent;
     width: 100%;
     justify-content: flex-start;
     padding-top: 10px;
@@ -51,11 +51,5 @@
 
   .site-list__link {
     line-height: 18px;
-  }
-}
-
-@media (max-width: $until-tablet-width) {
-  .no-js .site-list__item-list {
-    display: block;
   }
 }

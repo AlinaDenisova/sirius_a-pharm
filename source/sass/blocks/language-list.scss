@@ -12,16 +12,6 @@
   }
 }
 
-
-@media (min-width: $tablet-width) {
-  .language-list {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0;
-    padding-top: 20px;
-  }
-}
-
 .language-list__link {
   text-transform: uppercase;
   font-size: 14px;
@@ -36,10 +26,12 @@
   }
 }
 
+
 @media (min-width: $tablet-width) {
-  .language-list__link {
-    &:last-child {
-      margin-right: 0;
-    }
+  .language-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding-top: 20px;
   }
 }

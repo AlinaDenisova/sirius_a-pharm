@@ -1,5 +1,5 @@
 .contacts {
-  padding: 10px 0;
+  padding: 20px 0;
   color: #ffffff;
   display: flex;
   flex-direction: column;
@@ -11,6 +11,7 @@
   font-weight: 700;
   font-size: 22px;
   line-height: 35px;
+  padding-bottom: 10px;
   color: #ffffff;
   text-decoration: none;
   text-transform: uppercase;
@@ -22,6 +23,7 @@
   text-decoration: underline;
   font-size: 14px;
   line-height: 18px;
+  padding-bottom: 5px;
 }
 
 @media (min-width: $tablet-width) {
@@ -31,6 +33,12 @@
     padding-top: 10px;
     align-items: flex-start;
   }
+
+  .contacts__phone {
+    padding: 0;
+  }
+
+  .contacts__email {
+    padding: 0;
+  }
 }
-
-

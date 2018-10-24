@@ -1,6 +1,11 @@
 .promo {
+  margin-top: auto;
+}
+
+.promo__container {
+  margin: 0 20px;
+  margin-bottom: calc(100% - 60%);
   padding: 0 25px;
-  margin: auto 20px calc(100% - 60%);
   width: 87%;
   box-sizing: border-box;
 }
@@ -19,8 +24,9 @@
 }
 
 @media (min-width: $tablet-width) {
-  .promo {
-    margin: auto 0 calc(100% - 79.5%);
+  .promo__container {
+    margin: 0;
+    margin-bottom: calc(100% - 79.5%);
   }
 
   .promo__wrapper {
@@ -29,4 +35,10 @@
   }
 }
 
-
+@media (min-width: $desktop-width) {
+  .promo__container {
+    @include desktop-width;
+    margin-bottom: 230px;
+    padding: 0 180px 0 25px;
+  }
+}
