@@ -18,8 +18,9 @@
   text-decoration: none;
 
   &:hover,
-  &:focus {
-    color: #ffffff;
+  &:focus,
+  &:active {
+    opacity: 0.5;
   }
 }
 

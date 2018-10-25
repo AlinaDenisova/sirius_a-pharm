@@ -1,0 +1,136 @@
+.clients {
+  background-color: #f2f4f6;
+  padding-bottom: 30px;
+}
+
+.clients__container {
+  @include container;
+}
+
+.clients__title {
+  font-size: 22px;
+  line-height: 26px;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 400;
+  margin: 0;
+  padding-top: 35px;
+  padding-bottom: 50px;
+}
+
+.clients__list {
+  @include list-reset;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.clients__item {
+  width: 200px;
+  height: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 15px;
+}
+
+.clients__link img {
+  display: block;
+}
+
+@media (min-width: $tablet-width) {
+  .clients {
+    position: relative;
+    padding-bottom: 75px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 22%;
+      top: -10px;
+      width: 31px;
+      height: 56px;
+      background-color: $green;
+      transform: skew(155deg);
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: 33.3%;
+      bottom: -25px;
+      width: 31px;
+      height: 85px;
+      background-color: #2c88ce;
+      transform: skew(155deg);
+    }
+  }
+
+  .clients__container {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      right: 8%;
+      top: 0;
+      width: 31px;
+      height: 81px;
+      background-color: #ffffff;
+      transform: skew(155deg);
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: 1.5%;
+      top: -15px;
+      width: 31px;
+      height: 77px;
+      background-color: #393185;
+      transform: skew(155deg);
+    }
+  }
+
+  .clients__title {
+    font-size: 26px;
+    line-height: 32px;
+    padding-top: 55px;
+    padding-bottom: 70px;
+  }
+
+  .clients__list {
+    justify-content: space-around;
+  }
+
+  .clients__wrapper {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .clients__container {
+    @include desktop-width;
+  }
+
+  .clients__list {
+    justify-content: flex-start;
+  }
+
+  .clients__wrapper {
+    width: 570px;
+    margin-right: 30px;
+
+    &:last-of-type {
+      width: 540px;
+      margin-right: 0;
+    }
+  }
+
+  .clients__item {
+    width: auto;
+  }
+}

@@ -1,0 +1,150 @@
+.page-footer {
+  background-color: #ffffff;
+  border-top: 9px solid #bdd1e1;
+}
+
+.page-footer__container {
+  @include container;
+  padding: 55px 20px 85px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.page-footer__wrapper {
+  width: calc(100% - 20%);
+}
+
+.page-footer__logo {
+  width: 100%;
+  padding-bottom: 10px;
+}
+
+.page-footer__logo-link {
+  &:hover,
+  &:focus,
+  &:active, {
+    opacity: 0.5;
+  }
+}
+
+.page-footer__img {
+  margin-right: 15px;
+}
+
+.page-footer__copyright-text {
+  margin: 0;
+  font-size: 13px;
+  line-height: 20px;
+}
+
+.page-footer__development {
+  padding-top: 25px;
+  width: calc(100% - 20%);
+}
+
+.page-footer__development-link {
+  color: $text-color;
+  display: flex;
+  align-items: center;
+
+  &:hover,
+  &:focus,
+  &:active, {
+    color: rgba($text-color, 0.7);
+  }
+}
+
+.page-footer__development-icon {
+  margin-right: 13px;
+  padding-top: 10px;
+}
+
+.page-footer__development-text {
+  margin: 0;
+  font-size: 13px;
+  line-height: 20px;
+
+  & br {
+    display: none;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .page-footer {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 35%;
+      top: 0;
+      width: 31px;
+      height: 161px;
+      background-color: #bdd1e1;
+      transform: skew(155deg);
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 42%;
+      top: -30px;
+      width: 31px;
+      height: 81px;
+      background-color: #393185;
+      transform: skew(155deg);
+    }
+  }
+
+  .page-footer__container {
+    position: relative;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 55px 0 85px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      right: 25%;
+      bottom: 0;
+      width: 31px;
+      height: 78px;
+      background-color: $green;
+      transform: skew(155deg);
+    }
+  }
+
+  .page-footer__wrapper {
+    width: 28%;
+  }
+
+  .page-footer__development-link {
+    align-items: flex-start;
+  }
+
+  .page-footer__development {
+    width: 230px;
+  }
+
+  .page-footer__development-text {
+    margin: 0;
+    font-size: 13px;
+    line-height: 20px;
+
+    & br {
+      display: block;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page-footer__container {
+    @include desktop-width;
+  }
+
+  .page-footer__wrapper {
+    width: 320px;
+  }
+}

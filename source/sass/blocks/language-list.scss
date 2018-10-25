@@ -20,9 +20,14 @@
   color: #ffffff;
   border-bottom: 1px dotted #ffffff;
 
-  &:hover,
   &--active {
     border-bottom: none;
+  }
+
+  &:hover,
+  &:focus,
+  &:active, {
+    opacity: 0.5;
   }
 }
 
