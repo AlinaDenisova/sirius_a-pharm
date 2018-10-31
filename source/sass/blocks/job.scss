@@ -1,0 +1,81 @@
+.job {
+  background-color: #ffffff;
+  padding-bottom: 85px;
+}
+
+.job__container {
+  @include container;
+  text-align: center;
+}
+
+.job__title {
+  font-size: 26px;
+  line-height: 26px;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 400;
+  margin: 0;
+  padding-top: 55px;
+  padding-bottom: 20px;
+}
+
+.job__text {
+  margin: 0;
+  font-size: 16px;
+  line-height: 28px;
+  padding-bottom: 15px;
+}
+
+.job__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  margin-top: 30px;
+  width: 310px;
+
+  &:hover,
+  &:focus,
+  &:active {
+    opacity: 0.5;
+  }
+}
+
+.job__link-text {
+  font-size: 22px;
+  line-height: 26px;
+  margin: 0;
+  text-transform: uppercase;
+  color: $text-color;
+  margin-left: 20px;
+}
+
+@media (min-width: $tablet-width) {
+  .job {
+    padding-bottom: 195px;
+  }
+
+  .job__title {
+    font-size: 32px;
+    line-height: 32px;
+    padding-top: 75px;
+    padding-bottom: 30px;
+  }
+
+  .job__text {
+    font-size: 18px;
+    line-height: 32px;
+    padding-bottom: 30px;
+  }
+
+  .job__link-text {
+    font-size: 24px;
+    line-height: 32px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .job__container {
+    @include desktop-width;
+  }
+}

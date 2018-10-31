@@ -1,4 +1,6 @@
 [
   "source/js/modules/remove-no-js.js",
-  "source/js/modules/navigation.js"
+  "source/js/modules/navigation.js",
+  "source/js/modules/select.js",
+  "source/js/modules/calendar.js"
 ]

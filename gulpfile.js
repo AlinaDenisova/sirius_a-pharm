@@ -1,36 +1,5 @@
 "use strict";
 
-// var gulp = require("gulp");
-// var sass = require("gulp-sass");
-// var plumber = require("gulp-plumber");
-// var postcss = require("gulp-postcss");
-// var autoprefixer = require("autoprefixer");
-// var server = require("browser-sync").create();
-
-// gulp.task("style", function() {
-//   gulp.src("source/sass/style.scss")
-//     .pipe(plumber())
-//     .pipe(sass())
-//     .pipe(postcss([
-//       autoprefixer()
-//     ]))
-//     .pipe(gulp.dest("source/css"))
-//     .pipe(server.stream());
-// });
-
-// gulp.task("serve", ["style"], function() {
-//   server.init({
-//     server: "source/",
-//     notify: false,
-//     open: true,
-//     cors: true,
-//     ui: false
-//   });
-
-//   gulp.watch("source/sass/**/*.{scss,sass}", ["style"]);
-//   gulp.watch("source/*.html").on("change", server.reload);
-// });
-
 var gulp = require('gulp');
 var sass = require('gulp-sass');
 var plumber = require("gulp-plumber");
@@ -59,7 +28,7 @@ gulp.task('jsDev', function () { // Склеивает js модули для р
     .pipe(sourcemaps.init({loadMaps: true}))
     .pipe(concat('all.js'))
     .pipe(sourcemaps.write('.'))
-    .pipe(gulp.dest('dev/js'));
+    .pipe(gulp.dest('source/js'));
 });
 
 gulp.task('jsBuild', function () { // Склеивает и сжимает js модули для билда
@@ -80,10 +49,11 @@ gulp.task('jsMinBuild', function (cb) { // Сжимает самостоятел
 });
 
 gulp.task('imagesBuild', function() { // Оптимизирует растровую графику (только для билда)
-  return gulp.src('source/img/**/*.{jpg,png}')
+  return gulp.src('source/img/**/*.{jpg,png,svg}')
     .pipe(cache(imagemin([
       imagemin.gifsicle({interlaced: true}),
       imagemin.jpegtran({progressive: true}),
+      imagemin.svgo(),
       imageminJpegRecompress({
         loops: 5,
         min: 50,
@@ -104,7 +74,6 @@ gulp.task('clearCache', function (done) { // Чистит кэш
 
 gulp.task('webpDev', function() { // Копирует графику в webP формат для разработки
   return gulp.src('source/img/**/*.{jpg,png}', {since: gulp.lastRun('webpDev')})
-    .pipe(newer('dev/img'))
     .pipe(webp({quality: 70}))
     .pipe(gulp.dest("dev/img"));
 });
@@ -177,15 +146,6 @@ gulp.task('cleanBuild', function () { // удаляет папку "build"
   return del('build');
 });
 
-
-gulp.task('svgBuild', function() { // Оптимизирует SVG для билда
-  return gulp.src("source/img/icon-*.svg")
-    .pipe(imagemin([
-      imagemin.svgo()
-    ]))
-    .pipe(gulp.dest("build/img"));
-});
-
 gulp.task('serve', function () { // Запускает сервер, при изменениях перезагружается
   browserSync.init({
     server: 'dev',
@@ -203,4 +163,4 @@ gulp.task('watch', function () { // Настройки вотчера
 
 gulp.task('dev', gulp.series(gulp.parallel('styleDev', 'copyDev', 'webpDev', 'jsDev', 'copyHTMLDev',), gulp.parallel('clearCache', 'watch', 'serve')));
 
-gulp.task('build', gulp.series('cleanBuild', gulp.parallel('svgBuild', 'styleBuild', 'imagesBuild', 'copyBuild', 'webpBuild', 'jsBuild', 'jsMinBuild', gulp.series('copyHTMLBuild', 'clearCache'))));
+gulp.task('build', gulp.series('cleanBuild', gulp.parallel('styleBuild', 'imagesBuild', 'copyBuild', 'webpBuild', 'jsBuild', 'jsMinBuild', gulp.series('copyHTMLBuild', 'clearCache'))));

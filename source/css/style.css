@@ -617,7 +617,7 @@ label.visually-hidden:active {
   .site-list__link {
     line-height: 18px; } }
 
-.contacts {
+.header-contacts {
   padding: 20px 0;
   color: #ffffff;
   display: -webkit-box;
@@ -631,7 +631,7 @@ label.visually-hidden:active {
       -ms-flex-align: center;
           align-items: center; }
 
-.contacts__phone {
+.header-contacts__phone {
   display: block;
   font-weight: 700;
   font-size: 22px;
@@ -640,30 +640,30 @@ label.visually-hidden:active {
   color: inherit;
   text-decoration: none;
   text-transform: uppercase; }
-  .contacts__phone:hover, .contacts__phone:focus, .contacts__phone:active {
+  .header-contacts__phone:hover, .header-contacts__phone:focus, .header-contacts__phone:active {
     opacity: 0.5; }
 
-.contacts__email {
+.header-contacts__email {
   color: inherit;
   display: block;
   text-decoration: underline;
   font-size: 14px;
   line-height: 18px;
   padding-bottom: 5px; }
-  .contacts__email:hover, .contacts__email:focus, .contacts__email:active {
+  .header-contacts__email:hover, .header-contacts__email:focus, .header-contacts__email:active {
     opacity: 0.5; }
 
 @media (min-width: 750px) {
-  .contacts {
+  .header-contacts {
     margin-left: auto;
     padding: 0;
     padding-top: 10px;
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start; }
-  .contacts__phone {
+  .header-contacts__phone {
     padding: 0; }
-  .contacts__email {
+  .header-contacts__email {
     padding: 0; } }
 
 .promo {

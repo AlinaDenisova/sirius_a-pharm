@@ -103,12 +103,6 @@
   .clients__list {
     justify-content: space-around;
   }
-
-  .clients__wrapper {
-    display: flex;
-    width: 100%;
-    justify-content: space-around;
-  }
 }
 
 @media (min-width: $desktop-width) {
@@ -117,20 +111,21 @@
   }
 
   .clients__list {
-    justify-content: flex-start;
-  }
-
-  .clients__wrapper {
-    width: 570px;
-    margin-right: 30px;
-
-    &:last-of-type {
-      width: 540px;
-      margin-right: 0;
-    }
+    justify-content: space-between;
+    padding-right: 10px;
+    padding-left: 30px;
   }
 
   .clients__item {
     width: auto;
+    margin-right: 45px;
+
+    &:nth-child(3) {
+      margin-right: 80px;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
   }
 }

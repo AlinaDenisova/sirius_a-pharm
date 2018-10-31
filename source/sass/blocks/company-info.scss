@@ -1,0 +1,189 @@
+.company-info {
+  background-color: #ffffff;
+  padding-top: 40px;
+
+  &--sirius {
+    padding-bottom: 5px;
+  }
+
+  &--pharm {
+    padding-bottom: 40px;
+  }
+}
+
+.company-info__container {
+  @include container;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  line-height: 28px;
+}
+
+.company-info__logo {
+  padding-bottom: 10px;
+}
+
+.company-info__title {
+  margin: 0;
+  font-size: 26px;
+  font-weight: 400;
+  text-transform: uppercase;
+  padding-bottom: 35px;
+}
+
+.company-info__direction {
+  color: #2c88ce;
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: 0;
+  padding-bottom: 40px;
+}
+
+.company-info__represent {
+  margin: 0;
+  font-size: 16px;
+  border: 3px solid #f2f4f6;
+  padding: 20px 10px;
+  margin-bottom: 40px;
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.company-info__text {
+  margin: 0;
+  font-size: 16px;
+  padding-bottom: 45px;
+}
+
+.company-info__highlight {
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+.company-info__features {
+  background-color: #f2f4f6;
+  padding-top: 30px;
+}
+
+.company-info__features-title {
+  font-size: 22px;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin: 0;
+  padding-bottom: 40px;
+}
+
+.company-info__list {
+  @include list-reset;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.company-info__item {
+  padding-bottom: 15px;
+  padding-left: 35px;
+  width: 50%;
+  text-align: left;
+  box-sizing: border-box;
+}
+
+.company-info__item-text {
+  margin: 0;
+  line-height: 20px;
+  font-size: 14px;
+}
+
+@media (min-width: $tablet-width) {
+  .company-info {
+    padding-top: 60px;
+
+    &--sirius {
+      padding-bottom: 15px;
+    }
+
+    &--pharm {
+      padding-bottom: 65px;
+      position: relative;
+      z-index: 1;
+    }
+
+    &--pharm::before {
+      content: "";
+      position: absolute;
+      width: 31px;
+      transform: skew(155deg);
+      left: 12%;
+      bottom: -60px;
+      height: 85px;
+      background-color: #2c88ce;
+    }
+  }
+
+  .company-info__container {
+    line-height: 32px;
+  }
+
+  .company-info__title {
+    font-size: 28px;
+    padding-bottom: 50px;
+  }
+
+  .company-info__direction {
+    font-size: 22px;
+    padding-bottom: 65px;
+  }
+
+  .company-info__represent {
+    font-size: 18px;
+    padding: 0 25px;
+    padding-top: 35px;
+    padding-bottom: 30px;
+    margin-bottom: 60px;
+
+    &--pharm {
+      margin-bottom: 30px;
+    }
+  }
+
+  .company-info__text {
+    font-size: 18px;
+    padding-bottom: 60px;
+
+    &--pharm {
+      padding-bottom: 30px;
+    }
+  }
+
+  .company-info__highlight {
+    font-size: 18px;
+    padding-top:  5px;
+  }
+
+  .company-info__features {
+    padding-top: 60px;
+  }
+
+  .company-info__features-title {
+    font-size: 24px;
+    padding-bottom: 75px;
+  }
+
+  .company-info__item {
+  }
+
+  .company-info__item-text {
+    font-size: 16px;
+    line-height: 22px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .company-info__container {
+    @include desktop-width;
+  }
+}

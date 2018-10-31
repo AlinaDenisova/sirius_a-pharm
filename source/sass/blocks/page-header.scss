@@ -10,6 +10,11 @@
   width: 100%;
   min-height: 700px;
 
+  &--inner {
+    min-height: 0;
+    background-position: 55% 10%;
+  }
+
   @media (min-resolution: $retina-2dpi), (min-resolution: $retina-2dppx) {
     background-image: url("../img/bg-index@2x.jpg");
     background-size: 1920px auto;
@@ -144,6 +149,11 @@
     }
   }
 
+  .page-header--inner.page-header--opened {
+    min-height: 592px;
+    background-position: 0 -300%;
+  }
+
   .no-js {
     .page-header {
       min-height: 1100px;
@@ -161,25 +171,34 @@
 
 @media (min-width: $tablet-width) {
   .page-header {
-    padding-bottom: 161px;
-    background-image: url("../img/stripes-index.png"), url("../img/bg-index.jpg"), linear-gradient(to bottom, #000000 700px, #ffffff 161px, #ffffff);
+    background-image: url("../img/stripes.png"), url("../img/bg-index.jpg");
     background-repeat: no-repeat, no-repeat;
-    background-size: auto;
+    background-size: auto, auto;
     background-position-y: 0;
-    background-position-x: calc(100% - 50%), calc(100% - 50%);
+    background-position-x: calc((100% - 50%) + 30px), calc((100% - 50%));
 
     @media (min-resolution: $retina-2dpi), (min-resolution: $retina-2dppx) {
-      background-image: url("../img/stripes-index@2x.png"), url("../img/bg-index@2x.jpg"), linear-gradient(to bottom, #000000 700px, #ffffff 161px, #ffffff);
-      background-size: 1420px auto, 1920px auto;
+      background-image: url("../img/stripes@2x.png");
+      background-size: 1350px auto;
     }
 
     @media (min-resolution: $retina-3dpi), (min-resolution: $retina-3dppx) {
-      background-image: url("../img/stripes-index@3x.png"), url("../img/bg-index@3x.jpg"), linear-gradient(to bottom, #000000 700px, #ffffff 161px, #ffffff);
-      background-size: 1420px auto, 1920px auto;
+      background-image: url("../img/stripes@3x.png");
+      background-size: 1350px auto;
+    }
+
+    &--inner {
+      padding-bottom: 25px;
+    }
+
+    &--inner .page-header__container::after {
+      height: 156px;
+      left: 20%;
     }
   }
 
   .page-header__container {
+    position: relative;
     flex-direction: row;
     flex-wrap: wrap;
     align-items: top;
@@ -187,6 +206,17 @@
     padding-top: 15px;
     background-image: none;
     background-color: transparent;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 31px;
+      transform: skew(155deg);
+      top: 0;
+      left: 6%;
+      height: 860px;
+      background-color: rgba(#186aa9, 0.3);
+    }
   }
 
   .page-header__logo {

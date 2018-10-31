@@ -1,5 +1,7 @@
 .site-list {
   @include list-reset;
+  position: relative;
+  z-index: 2;
 }
 
 .site-list__item {
