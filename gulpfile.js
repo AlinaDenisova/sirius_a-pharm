@@ -28,7 +28,7 @@ gulp.task('jsDev', function () { // Склеивает js модули для р
     .pipe(sourcemaps.init({loadMaps: true}))
     .pipe(concat('all.js'))
     .pipe(sourcemaps.write('.'))
-    .pipe(gulp.dest('source/js'));
+    .pipe(gulp.dest('dev/js'));
 });
 
 gulp.task('jsBuild', function () { // Склеивает и сжимает js модули для билда
