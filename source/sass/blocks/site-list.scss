@@ -101,14 +101,23 @@
 }
 
 @media (min-width: $desktop-width) {
-  .site-list__item {
-    &--dropdown {
-      padding: 0;
+  .site-list__item--dropdown {
+    &:hover .site-list__toggle,
+    &:focus .site-list__toggle,
+    &:active .site-list__toggle {
+      top: 6px;
+      right: 0;
+      border: 2px solid #ffffff;
+      border-right: none;
+      border-bottom: none;
+      opacity: 0.5;
     }
-  }
 
-  .site-list__toggle {
-    display: none;
+    &:hover .site-list__link,
+    &:focus .site-list__link,
+    &:active .site-list__link {
+      opacity: 0.5;
+    }
   }
 
   .site-list__link {

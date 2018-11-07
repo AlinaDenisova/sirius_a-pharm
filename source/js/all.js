@@ -49,6 +49,7 @@ window.navigation = (function () {
 
   var siteToggle = document.querySelector(".site-list__toggle");
   var subNav = document.querySelector(".sub-nav");
+  var dropdown = document.querySelector(".site-list__item--dropdown");
 
   var dropdownItem = function () {
     if (subNav.classList.contains('sub-nav--active')) {
@@ -61,11 +62,11 @@ window.navigation = (function () {
   };
 
   if (!isMobileScreen()) {
-    siteList.addEventListener("mouseenter", function (evt) {
+    dropdown.addEventListener("mouseenter", function (evt) {
       subNav.classList.remove("sub-nav--active");
       subNav.classList.add("sub-nav--active");
     });
-    siteList.addEventListener("mouseleave", function (evt) {
+    dropdown.addEventListener("mouseleave", function (evt) {
       subNav.classList.add("sub-nav--active");
       subNav.classList.remove("sub-nav--active");
     });

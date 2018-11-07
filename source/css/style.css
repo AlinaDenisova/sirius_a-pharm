@@ -493,10 +493,11 @@ label.visually-hidden:active {
 
 @media (min-width: 750px) {
   .page-header {
+    min-height: 730px;
     background-image: url("../img/stripes.png"), url("../img/bg-index.jpg");
     background-repeat: no-repeat, no-repeat;
     background-size: auto, auto;
-    background-position-y: 0;
+    background-position-y: 100%;
     background-position-x: calc((100% - 50%) + 30px), calc((100% - 50%)); } }
   @media (min-width: 750px) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 750px) and (min-resolution: 144dpi), (min-width: 750px) and (min-resolution: 1.5dppx) {
     .page-header {
@@ -509,9 +510,10 @@ label.visually-hidden:active {
 
 @media (min-width: 750px) {
     .page-header--inner {
-      min-height: 250px; }
+      min-height: 260px;
+      background-position-y: 0; }
     .page-header--inner .page-header__container::after {
-      height: 250px;
+      height: 260px;
       left: 20%; }
   .page-header__container {
     position: relative;
@@ -543,6 +545,11 @@ label.visually-hidden:active {
     margin-right: 8.5%; } }
 
 @media (min-width: 1140px) {
+  .page-header {
+    min-height: 700px;
+    background-position-y: 0; }
+    .page-header--inner {
+      min-height: 260px; }
   .page-header__container {
     max-width: 1140px;
     min-width: 1140px;
@@ -674,10 +681,19 @@ label.visually-hidden:active {
     line-height: 18px; } }
 
 @media (min-width: 1140px) {
-  .site-list__item--dropdown {
-    padding: 0; }
-  .site-list__toggle {
-    display: none; }
+  .site-list__item--dropdown:hover .site-list__toggle,
+  .site-list__item--dropdown:focus .site-list__toggle,
+  .site-list__item--dropdown:active .site-list__toggle {
+    top: 6px;
+    right: 0;
+    border: 2px solid #ffffff;
+    border-right: none;
+    border-bottom: none;
+    opacity: 0.5; }
+  .site-list__item--dropdown:hover .site-list__link,
+  .site-list__item--dropdown:focus .site-list__link,
+  .site-list__item--dropdown:active .site-list__link {
+    opacity: 0.5; }
   .site-list__link:hover ~ .sub-nav,
   .site-list__link:focus ~ .sub-nav,
   .site-list__link:active ~ .sub-nav {
@@ -697,6 +713,7 @@ label.visually-hidden:active {
   margin: 0;
   padding: 0;
   list-style: none;
+  padding-top: 10px;
   padding-bottom: 10px;
   display: none; }
   .sub-nav--active {

@@ -172,10 +172,11 @@
 
 @media (min-width: $tablet-width) {
   .page-header {
+    min-height: 730px;
     background-image: url("../img/stripes.png"), url("../img/bg-index.jpg");
     background-repeat: no-repeat, no-repeat;
     background-size: auto, auto;
-    background-position-y: 0;
+    background-position-y: 100%;
     background-position-x: calc((100% - 50%) + 30px), calc((100% - 50%));
 
     @media (min-resolution: $retina-2dpi), (min-resolution: $retina-2dppx) {
@@ -189,11 +190,12 @@
     }
 
     &--inner {
-      min-height: 250px;
+      min-height: 260px;
+      background-position-y: 0;
     }
 
     &--inner .page-header__container::after {
-      height: 250px;
+      height: 260px;
       left: 20%;
     }
   }
@@ -227,6 +229,15 @@
 }
 
 @media (min-width: $desktop-width) {
+  .page-header {
+    min-height: 700px;
+    background-position-y: 0;
+
+    &--inner {
+      min-height: 260px;
+    }
+  }
+
   .page-header__container {
     @include desktop-width;
   }
