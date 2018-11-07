@@ -31,6 +31,7 @@
   min-height: 80px;
   box-sizing: border-box;
   padding: 15px 0;
+  z-index: 3;
 }
 
 .page-header__logo-link {
@@ -178,21 +179,21 @@
     background-position-x: calc((100% - 50%) + 30px), calc((100% - 50%));
 
     @media (min-resolution: $retina-2dpi), (min-resolution: $retina-2dppx) {
-      background-image: url("../img/stripes@2x.png");
-      background-size: 1350px auto;
+      background-image: url("../img/stripes@2x.png"), url("../img/bg-index@2x.jpg");
+      background-size: 1350px auto, 1920px auto;
     }
 
     @media (min-resolution: $retina-3dpi), (min-resolution: $retina-3dppx) {
-      background-image: url("../img/stripes@3x.png");
-      background-size: 1350px auto;
+      background-image: url("../img/stripes@3x.png"), url("../img/bg-index@3x.jpg");
+      background-size: 1350px auto, 1920px auto;
     }
 
     &--inner {
-      padding-bottom: 25px;
+      min-height: 250px;
     }
 
     &--inner .page-header__container::after {
-      height: 156px;
+      height: 250px;
       left: 20%;
     }
   }

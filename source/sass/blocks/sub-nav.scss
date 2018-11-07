@@ -1,0 +1,38 @@
+.sub-nav {
+  @include list-reset;
+  padding-bottom: 10px;
+  display: none;
+
+  &--active {
+    display: block;
+  }
+}
+
+.sub-nav__item {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 30px;
+  color: #ffffff;
+
+  &:hover,
+  &:focus,
+  &:active {
+    opacity: 0.5;
+  }
+}
+
+.sub-nav__link {
+  color: inherit;
+  text-decoration: none;
+}
+
+@media (min-width: $tablet-width) {
+  .sub-nav {
+    &--active {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      width: 100%;
+    }
+  }
+}
