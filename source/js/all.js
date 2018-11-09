@@ -52,7 +52,7 @@ window.navigation = (function () {
   var dropdown = document.querySelector(".site-list__item--dropdown");
 
   var dropdownItem = function () {
-    if (subNav.classList.contains('sub-nav--active')) {
+    if (subNav.classList.contains('sub-nav--active') && siteToggle.classList.contains('site-list__toggle--active')){
       subNav.classList.remove('sub-nav--active');
       siteToggle.classList.remove('site-list__toggle--active');
     } else {

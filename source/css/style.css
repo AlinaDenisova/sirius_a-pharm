@@ -473,7 +473,7 @@ label.visually-hidden:active {
 
 @media (max-width: 749px) {
   .page-header--opened {
-    min-height: 1100px; }
+    min-height: 1160px; }
   .page-header--closed .page-header__container {
     max-height: 80px;
     overflow: hidden;
@@ -482,10 +482,10 @@ label.visually-hidden:active {
   .page-header--opened .page-header__container {
     overflow: visible; }
   .page-header--inner.page-header--opened {
-    min-height: 592px;
-    background-position: 0 -300%; }
+    min-height: 642px;
+    background-position: 0 -780%; }
   .no-js .page-header {
-    min-height: 1100px; }
+    min-height: 1160px; }
   .no-js .page-header__container {
     overflow: visible; }
   .no-js .page-header__toggle {
@@ -493,7 +493,7 @@ label.visually-hidden:active {
 
 @media (min-width: 750px) {
   .page-header {
-    min-height: 730px;
+    min-height: 700px;
     background-image: url("../img/stripes.png"), url("../img/bg-index.jpg");
     background-repeat: no-repeat, no-repeat;
     background-size: auto, auto;
@@ -513,8 +513,8 @@ label.visually-hidden:active {
       min-height: 260px;
       background-position-y: 0; }
     .page-header--inner .page-header__container::after {
-      height: 260px;
-      left: 20%; }
+      left: 20%;
+      height: 100%; }
   .page-header__container {
     position: relative;
     -webkit-box-orient: horizontal;
@@ -624,27 +624,33 @@ label.visually-hidden:active {
   .site-list__link:hover, .site-list__link:focus, .site-list__link:active {
     opacity: 0.5; }
 
+.site-list__dropdown-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+
 .site-list__toggle {
-  position: absolute;
-  top: 10px;
-  right: 0;
   width: 10px;
   height: 10px;
   padding: 0;
   margin: 0;
+  margin-top: 10px;
   background-color: transparent;
   border: 2px solid #ffffff;
   border-top: none;
   border-left: none;
+  margin-left: 15px;
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg); }
   .site-list__toggle--active {
-    top: 16px;
-    right: 0;
     border: 2px solid #ffffff;
     border-right: none;
     border-bottom: none;
-    opacity: 0.5; }
+    opacity: 0.5;
+    margin-top: 16px; }
 
 @media (max-width: 749px) {
   .no-js .site-list__item-list {
@@ -664,7 +670,8 @@ label.visually-hidden:active {
     -webkit-box-pack: start;
     -ms-flex-pack: start;
     justify-content: flex-start;
-    padding-top: 30px; }
+    padding-top: 30px;
+    min-height: 150px; }
   .site-list__item {
     margin-right: 2.6%;
     border-bottom: none; }
@@ -672,28 +679,40 @@ label.visually-hidden:active {
       margin-right: 2.1%; }
     .site-list__item--dropdown {
       padding: 0;
-      padding-right: 20px; }
+      max-width: 16%;
+      min-width: 16%; }
+  .site-list__dropdown-wrapper {
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    width: 100%; }
   .site-list__toggle {
-    top: 0; }
+    margin-top: 0;
+    margin-left: 10px; }
     .site-list__toggle--active {
-      top: 6px; }
+      margin-top: 6px; }
   .site-list__link {
-    line-height: 18px; } }
+    line-height: 18px;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box; } }
 
 @media (min-width: 1140px) {
-  .site-list__item--dropdown:hover .site-list__toggle,
-  .site-list__item--dropdown:focus .site-list__toggle,
-  .site-list__item--dropdown:active .site-list__toggle {
-    top: 6px;
-    right: 0;
-    border: 2px solid #ffffff;
-    border-right: none;
-    border-bottom: none;
-    opacity: 0.5; }
-  .site-list__item--dropdown:hover .site-list__link,
-  .site-list__item--dropdown:focus .site-list__link,
-  .site-list__item--dropdown:active .site-list__link {
-    opacity: 0.5; }
+  .site-list__item--dropdown {
+    min-width: 130px;
+    max-width: 130px; }
+    .site-list__item--dropdown:hover .site-list__toggle,
+    .site-list__item--dropdown:focus .site-list__toggle,
+    .site-list__item--dropdown:active .site-list__toggle {
+      margin-top: 6px;
+      border: 2px solid #ffffff;
+      border-right: none;
+      border-bottom: none;
+      opacity: 0.5; }
+    .site-list__item--dropdown:hover .site-list__link,
+    .site-list__item--dropdown:focus .site-list__link,
+    .site-list__item--dropdown:active .site-list__link {
+      opacity: 0.5; }
   .site-list__link:hover ~ .sub-nav,
   .site-list__link:focus ~ .sub-nav,
   .site-list__link:active ~ .sub-nav {
@@ -717,13 +736,29 @@ label.visually-hidden:active {
   padding-bottom: 10px;
   display: none; }
   .sub-nav--active {
-    display: block; }
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
 
 .sub-nav__item {
   font-weight: 400;
   font-size: 14px;
-  line-height: 30px;
-  color: #ffffff; }
+  line-height: 22px;
+  color: #ffffff;
+  padding-bottom: 8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
   .sub-nav__item:hover, .sub-nav__item:focus, .sub-nav__item:active {
     opacity: 0.5; }
 
@@ -740,10 +775,14 @@ label.visually-hidden:active {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-    -webkit-box-align: start;
-    -ms-flex-align: start;
-    align-items: flex-start;
-    width: 100%; } }
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    width: 100%; }
+  .sub-nav__item {
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start; } }
 
 .header-contacts {
   padding: 20px 0;
@@ -824,7 +863,7 @@ label.visually-hidden:active {
 @media (min-width: 750px) {
   .promo__container {
     margin: 0;
-    margin-bottom: calc(100% - 79.5%); }
+    margin-bottom: calc(100% - 86.5%); }
   .promo__wrapper {
     font-size: 26px;
     line-height: 46px; } }

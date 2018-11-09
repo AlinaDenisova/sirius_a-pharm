@@ -135,7 +135,7 @@
 @media (max-width: $until-tablet-width) {
   .page-header {
     &--opened {
-      min-height: 1100px;
+      min-height: 1160px;
     }
 
     &--closed .page-header__container {
@@ -151,13 +151,13 @@
   }
 
   .page-header--inner.page-header--opened {
-    min-height: 592px;
-    background-position: 0 -300%;
+    min-height: 642px;
+    background-position: 0 -780%;
   }
 
   .no-js {
     .page-header {
-      min-height: 1100px;
+      min-height: 1160px;
     }
 
     .page-header__container {
@@ -172,7 +172,7 @@
 
 @media (min-width: $tablet-width) {
   .page-header {
-    min-height: 730px;
+    min-height: 700px;
     background-image: url("../img/stripes.png"), url("../img/bg-index.jpg");
     background-repeat: no-repeat, no-repeat;
     background-size: auto, auto;
@@ -195,8 +195,8 @@
     }
 
     &--inner .page-header__container::after {
-      height: 260px;
       left: 20%;
+      height: 100%;
     }
   }
 

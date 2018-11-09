@@ -5,15 +5,20 @@
   display: none;
 
   &--active {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 }
 
 .sub-nav__item {
   font-weight: 400;
   font-size: 14px;
-  line-height: 30px;
+  line-height: 22px;
   color: #ffffff;
+  padding-bottom: 8px;
+  display: flex;
+  justify-content: center;
 
   &:hover,
   &:focus,
@@ -32,8 +37,12 @@
     &--active {
       display: flex;
       flex-direction: column;
-      align-items: flex-start;
+      justify-content: flex-start;
       width: 100%;
     }
+  }
+
+  .sub-nav__item {
+    justify-content: flex-start;
   }
 }
