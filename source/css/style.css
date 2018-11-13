@@ -723,7 +723,7 @@ label.visually-hidden:active {
     order: 2;
     margin: 0;
     background-color: transparent;
-    width: 100%;
+    width: auto;
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
