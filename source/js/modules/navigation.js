@@ -99,11 +99,16 @@ window.navigation = (function () {
       }
   };
 
-  if (isMobileScreen()) {
-    siteList.addEventListener('click', dropdownItemHandler);
-  }
+  var rezizeNavWindowHandler = function () {
+    if (!isMobileScreen()) {
+      siteList.removeEventListener('click', dropdownItemHandler);
+    }
+  };
+
+  siteList.addEventListener('click', dropdownItemHandler);
+
   if (!isMobileScreen()) {
-    siteList.removeEventListener('click', dropdownItemHandler);
+    siteList.addEventListener('resize', rezizeNavWindowHandler);
     siteList.addEventListener("mouseover", dropdownOverItemHandler);
     siteList.addEventListener("mouseout", dropdownOutItemHandler);
   }
