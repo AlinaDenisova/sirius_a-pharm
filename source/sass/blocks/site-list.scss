@@ -114,7 +114,24 @@
 }
 
 @media (min-width: $desktop-width) {
-  .site-list__toggle--active + .site-list__link {
+  .site-list__item--active .site-list__link {
     opacity: 0.5;
+  }
+
+  .site-list__item--active .site-list__toggle {
+    opacity: 0.5;
+    border: 2px solid #ffffff;
+    border-right: none;
+    border-bottom: none;
+    opacity: 0.5;
+    top: 6px;
+  }
+
+  .site-list__item--active .sub-nav {
+    display: block;
+    position: absolute;
+    top: 20px;
+    left: 0;
+    width: max-content;
   }
 }
