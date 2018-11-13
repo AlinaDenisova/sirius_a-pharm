@@ -41,11 +41,13 @@ window.navigation = (function () {
     }
   };
 
-
   var siteList = document.querySelector('.site-list');
 
   var dropdownItem = function (item) {
     var openedItems = document.querySelectorAll('.site-list__toggle--active');
+    [].forEach.call(openedItems, function (openedItem) {
+      openedItem !== item && openedItem.classList.remove('site-list__toggle--active');
+    });
     if (item.classList.contains('site-list__toggle--active')) {
       item.classList.remove('site-list__toggle--active');
     } else {
