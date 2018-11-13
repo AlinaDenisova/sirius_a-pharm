@@ -28,7 +28,7 @@ gulp.task('jsDev', function () { // Склеивает js модули для р
     .pipe(sourcemaps.init({loadMaps: true}))
     .pipe(concat('all.js'))
     .pipe(sourcemaps.write('.'))
-    .pipe(gulp.dest('dev/js'));
+    .pipe(gulp.dest('source/js'));
 });
 
 gulp.task('jsBuild', function () { // Склеивает и сжимает js модули для билда
@@ -93,7 +93,7 @@ gulp.task('styleDev', function () { // Создает из стилей sass sty
       cascade: false,
       grid: true
     }))
-    .pipe(gulp.dest('dev/css'))
+    .pipe(gulp.dest('source/css'))
 });
 
 gulp.task('styleBuild', function () { // Создает из стилей sass style.css, расставляет префиксы, минифицирует (билд)
