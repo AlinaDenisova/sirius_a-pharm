@@ -82,6 +82,11 @@
   .site-list__item {
     border-bottom: none;
     position: relative;
+    margin-right: 60px;
+
+    &:first-child {
+      margin-right: 40px;
+    }
 
     &--dropdown {
       padding: 0;

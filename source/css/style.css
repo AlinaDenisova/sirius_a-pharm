@@ -731,7 +731,10 @@ label.visually-hidden:active {
     min-height: 150px; }
   .site-list__item {
     border-bottom: none;
-    position: relative; }
+    position: relative;
+    margin-right: 60px; }
+    .site-list__item:first-child {
+      margin-right: 40px; }
     .site-list__item--dropdown {
       padding: 0;
       padding-right: 30px; }
